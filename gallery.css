@@ -4,7 +4,7 @@
 .gallery-wrapper .gallery-box{
   padding: 5px !important;
 }
-
+ 
 .gallery-wrapper .gallery-item {
   display: block;
   overflow: hidden;
@@ -16,7 +16,7 @@
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.22);
 }
-
+ 
 .gallery-cover-box{
   width: 100%;
   padding-top: 60%;
@@ -27,7 +27,7 @@
   -webkit-background-size: cover;
   background-size: cover;
 }
-
+ 
 .gallery-cover-box .gallery-cover-img {
   display: inline-block;
   width: 100%;
@@ -43,7 +43,7 @@
   color: #666;
   margin: 0;
 }
-
+ 
 .waterfall {
   column-count: 3;
   column-gap: 1em;
@@ -76,7 +76,7 @@
   margin-bottom: 10px;
   border-top: 1px solid #dddddd;
 }
-
+ 
 /*适配移动端布局*/
 @media only screen and (max-width: 601px) {
   .waterfall {
