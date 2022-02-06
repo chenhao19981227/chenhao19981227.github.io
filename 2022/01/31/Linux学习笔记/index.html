@@ -405,19 +405,19 @@ Windows XP 之前的版本都是单用户操作系统
 <h2 id="1-2-Windows-和-Linux-文件系统区别"><a href="#1-2-Windows-和-Linux-文件系统区别" class="headerlink" title="1.2 Windows 和 Linux 文件系统区别"></a>1.2 <code>Windows</code> 和 <code>Linux</code> 文件系统区别</h2><h3 id="1-2-1-Windows-下的文件系统"><a href="#1-2-1-Windows-下的文件系统" class="headerlink" title="1.2.1 Windows 下的文件系统"></a>1.2.1 <code>Windows</code> 下的文件系统</h3><ul>
 <li>在 <code>Windows</code> 下，打开 “计算机”，我们看到的是一个个的驱动器盘符：</li>
 </ul>
-<p><img src="D:\python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\001_Windows下的多个盘.png" alt="001_Windows下的多个盘"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\001_Windows下的多个盘.png" alt="001_Windows下的多个盘"></p>
 <ul>
 <li>每个驱动器都有自己的根目录结构，这样形成了多个树并列的情形，如图所示：</li>
 </ul>
-<p><img src="D:\python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\001-Windows下多个盘为节点的目录分支.png" alt="001-Windows下多个盘为节点的目录分支"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\001-Windows下多个盘为节点的目录分支.png" alt="001-Windows下多个盘为节点的目录分支"></p>
 <h3 id="1-2-2-Linux-下的文件系统"><a href="#1-2-2-Linux-下的文件系统" class="headerlink" title="1.2.2 Linux 下的文件系统"></a>1.2.2 <code>Linux</code> 下的文件系统</h3><ul>
 <li>在 <code>Linux</code> 下，我们是看不到这些驱动器盘符，我们看到的是文件夹（目录）：</li>
 </ul>
-<p><img src="D:\python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\002_Ubuntu文件目录.png" alt="002_Ubuntu文件目录"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\002_Ubuntu文件目录.png" alt="002_Ubuntu文件目录"></p>
 <ul>
 <li><code>Ubuntu</code> 没有盘符这个概念，只有一个根目录 <code>/</code>，所有文件都在它下面</li>
 </ul>
-<p><img src="D:\python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\003-Linux的树形示意图.png" alt="003-Linux的树形示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料\linux\课程讲义\linux基础\linux\media\14927564336623\003-Linux的树形示意图.png" alt="003-Linux的树形示意图"></p>
 <h3 id="1-2-3-用户目录"><a href="#1-2-3-用户目录" class="headerlink" title="1.2.3 用户目录"></a>1.2.3 用户目录</h3><p>位于 <code>/home/user</code>，称之为用户工作目录或家目录，表示方式：</p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/home/user</span><br><span class="line">~</span><br></pre></td></tr></tbody></table></figure>
 
@@ -1184,7 +1184,7 @@ Windows XP 之前的版本都是单用户操作系统
 </tr>
 </tbody></table>
 <h3 id="3-3-1-ssh-基础（重点）"><a href="#3-3-1-ssh-基础（重点）" class="headerlink" title="3.3.1 ssh 基础（重点）"></a>3.3.1 <code>ssh</code> 基础（重点）</h3><p>在 Linux 中 SSH 是 <strong>非常常用</strong> 的工具，通过 <strong>SSH 客户端</strong> 我们可以连接到运行了 <strong>SSH 服务器</strong> 的远程机器上</p>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934132718311/001_SSH示意图.png" alt="001_SSH示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934132718311/001_SSH示意图.png" alt="001_SSH示意图"></p>
 <ul>
 <li><strong>SSH 客户端</strong>是一种使用 <code>Secure Shell（SSH）</code> 协议连接到远程计算机的软件程序</li>
 <li><code>SSH</code> 是目前较可靠，<strong>专为远程登录会话和其他网络服务</strong> 提供安全性的协议<ul>
@@ -1274,7 +1274,7 @@ Windows XP 之前的版本都是单用户操作系统
 <li>scp 就是 <code>secure copy</code>，是一个在 Linux 下用来进行 <strong>远程拷贝文件</strong> 的命令</li>
 <li>它的<strong>地址格式与 ssh 基本相同</strong>，<strong>需要注意的是</strong>，在指定端口时用的是大写的 <code>-P</code> 而不是小写的</li>
 </ul>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934132718311/002_SCP示意图.png" alt="002_SCP示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934132718311/002_SCP示意图.png" alt="002_SCP示意图"></p>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 把本地当前目录下的 01.py 文件复制到远程家目录下的 Desktop/01.py</span></span><br><span class="line"><span class="comment"># 注意：`:` 后面的路径如果不是绝对路径，则以用户的家目录作为参照路径，注意是大写P</span></span><br><span class="line">scp -P port 01.py user@remote:Desktop/01.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把远程家目录下的 Desktop/01.py 文件复制到本地当前目录下的 01.py</span></span><br><span class="line">scp -P port user@remote:Desktop/01.py 01.py</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加上 -r 选项可以传送文件夹</span></span><br><span class="line"><span class="comment"># 把当前目录下的 demo 文件夹复制到远程家目录下的 Desktop</span></span><br><span class="line">scp -P 22 -r demo user@remote:Desktop</span><br><span class="line"></span><br><span class="line"><span class="comment"># 把远程家目录下的 Desktop 复制到当前目录下的 demo 文件夹</span></span><br><span class="line">scp -P 22 -r user@remote:Desktop demo</span><br></pre></td></tr></tbody></table></figure>
 
 <table>
@@ -1386,7 +1386,7 @@ Windows XP 之前的版本都是单用户操作系统
 <h3 id="4-1-2-组"><a href="#4-1-2-组" class="headerlink" title="4.1.2 组"></a>4.1.2 组</h3><ul>
 <li>为了方便用户管理，提出了 <strong>组</strong> 的概念，如下图所示</li>
 </ul>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/001_组示意图.png" alt="001_组示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/001_组示意图.png" alt="001_组示意图"></p>
 <ul>
 <li>在实际应用中，可以预先针对 <strong>组</strong> 设置好权限，然后 <strong>将不同的用户添加到对应的组中</strong>，从而<strong>不用依次为每一个用户设置权限</strong></li>
 </ul>
@@ -1407,7 +1407,7 @@ Windows XP 之前的版本都是单用户操作系统
 </ul>
 </li>
 </ul>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/002_权限示意图.png" alt="002_权限示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/002_权限示意图.png" alt="002_权限示意图"></p>
 <h3 id="4-1-4-chmod-简单使用（重要）"><a href="#4-1-4-chmod-简单使用（重要）" class="headerlink" title="4.1.4 chmod 简单使用（重要）"></a>4.1.4 <code>chmod</code> 简单使用（重要）</h3><ul>
 <li><code>chmod</code> 可以修改 <strong>用户／组</strong> 对 <strong>文件／目录</strong> 的权限</li>
 <li>命令格式如下：</li>
@@ -1472,7 +1472,7 @@ Windows XP 之前的版本都是单用户操作系统
 <li><code>/etc</code> 目录是专门用来保存 <strong>系统配置信息</strong> 的目录</li>
 </ul>
 </blockquote>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/001_组示意图.png" alt="001_组示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/001_组示意图.png" alt="001_组示意图"></p>
 <ul>
 <li>在实际应用中，可以预先针对 <strong>组</strong> 设置好权限，然后 <strong>将不同的用户添加到对应的组中</strong>，从而<strong>不用依次为每一个用户设置权限</strong></li>
 </ul>
@@ -1629,7 +1629,7 @@ Windows XP 之前的版本都是单用户操作系统
 <li><code>su</code> 不接用户名，可以切换到 <code>root</code>，但是不推荐使用，因为不安全</li>
 <li><code>exit</code> 示意图如下：</li>
 </ul>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/003_su和exit示意图.png" alt="003_su和exit示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/003_su和exit示意图.png" alt="003_su和exit示意图"></p>
 <h2 id="4-4-修改文件权限"><a href="#4-4-修改文件权限" class="headerlink" title="4.4 修改文件权限"></a>4.4 修改文件权限</h2><table>
 <thead>
 <tr>
@@ -1664,7 +1664,7 @@ Windows XP 之前的版本都是单用户操作系统
 </ul>
 <figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接修改文件|目录的 读|写|执行 权限，但是不能精确到 拥有者|组|其他</span></span><br><span class="line">chmod +/-rwx 文件名|目录名</span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/004_文件权限示意图.png" alt="004_文件权限示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934198815905/004_文件权限示意图.png" alt="004_文件权限示意图"></p>
 <ul>
 <li>常见数字组合有（<code>u</code>表示用户／<code>g</code>表示组／<code>o</code>表示其他）：<ul>
 <li><code>777</code> ===&gt; <code>u=rwx,g=rwx,o=rwx</code> </li>
@@ -1899,7 +1899,7 @@ Windows XP 之前的版本都是单用户操作系统
 <h3 id="6-2-1硬链接简介（知道）"><a href="#6-2-1硬链接简介（知道）" class="headerlink" title="6.2.1硬链接简介（知道）"></a>6.2.1硬链接简介（知道）</h3><ul>
 <li>在使用 <code>ln</code> 创建链接时，如果没有 <code>-s</code> 选项，会创建一个 <strong>硬链接</strong>，而不是软链接</li>
 </ul>
-<h3 id="6-2-2-文件软硬链接的示意图"><a href="#6-2-2-文件软硬链接的示意图" class="headerlink" title="6.2.2 文件软硬链接的示意图"></a>6.2.2 文件软硬链接的示意图</h3><p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934226357576/001_文件软硬链接示意图.png" alt="001_文件软硬链接示意图"></p>
+<h3 id="6-2-2-文件软硬链接的示意图"><a href="#6-2-2-文件软硬链接的示意图" class="headerlink" title="6.2.2 文件软硬链接的示意图"></a>6.2.2 文件软硬链接的示意图</h3><p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934226357576/001_文件软硬链接示意图.png" alt="001_文件软硬链接示意图"></p>
 <blockquote>
 <p>在 Linux 中，<strong>文件名</strong> 和 <strong>文件的数据</strong> 是分开存储的</p>
 </blockquote>
@@ -2015,8 +2015,8 @@ Windows XP 之前的版本都是单用户操作系统
 <blockquote>
 <p>所谓镜像源，就是<strong>所有服务器的内容是相同的（镜像）</strong>，但是根据所在位置不同，国内服务器通常速度会更快一些！</p>
 </blockquote>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934226357576/003_镜像服务器示意图.png" alt="003_镜像服务器示意图"></p>
-<p><img src="D:/python学习资料/linux/课程讲义/linux基础/linux/media/14934226357576/001_ubuntu设置软件源.png" alt="001_ubuntu设置软件源"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934226357576/003_镜像服务器示意图.png" alt="003_镜像服务器示意图"></p>
+<p><img src="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/python学习资料/linux/课程讲义/linux基础/linux/media/14934226357576/001_ubuntu设置软件源.png" alt="001_ubuntu设置软件源"></p>
 
                 
             </div>
@@ -2130,18 +2130,17 @@ Windows XP 之前的版本都是单用户操作系统
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/01/31/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                <a href="/2022/02/05/test/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="测试博客">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">测试博客</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -2151,25 +2150,16 @@ Windows XP 之前的版本都是单用户操作系统
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-31
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-05
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            测试作者
+                            ch
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/">
-                        <span class="chip bg-color">测试标签</span>
-                    </a>
-                    
                 </div>
                 
             </div>

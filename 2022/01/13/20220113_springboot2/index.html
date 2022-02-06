@@ -386,7 +386,7 @@ web开发
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、Spring与SpringBoot"><a href="#一、Spring与SpringBoot" class="headerlink" title="一、Spring与SpringBoot"></a>一、Spring与SpringBoot</h1><h2 id="1-Spring能做什么"><a href="#1-Spring能做什么" class="headerlink" title="1 Spring能做什么"></a>1 Spring能做什么</h2><h3 id="1-1-Spring的能力"><a href="#1-1-Spring的能力" class="headerlink" title="1.1 Spring的能力"></a>1.1 Spring的能力</h3><p><img src="D:\GitBlog\source\media\f8f3c4e9545d43a413900c7eb2e3ec1.jpg" alt="f8f3c4e9545d43a413900c7eb2e3ec1"></p>
+                <h1 id="一、Spring与SpringBoot"><a href="#一、Spring与SpringBoot" class="headerlink" title="一、Spring与SpringBoot"></a>一、Spring与SpringBoot</h1><h2 id="1-Spring能做什么"><a href="#1-Spring能做什么" class="headerlink" title="1 Spring能做什么"></a>1 Spring能做什么</h2><h3 id="1-1-Spring的能力"><a href="#1-1-Spring的能力" class="headerlink" title="1.1 Spring的能力"></a>1.1 Spring的能力</h3><p><img src="http://r695duold.hn-bkt.clouddn.com/4d96caeb-f3a8-42ca-b690-d8cc3646d2cd.jpg" alt="alt"></p>
 <h3 id="1-2-Spring的生态"><a href="#1-2-Spring的生态" class="headerlink" title="1.2 Spring的生态"></a>1.2 Spring的生态</h3><p><a target="_blank" rel="noopener" href="https://spring.io/projects/spring-boot">https://spring.io/projects/spring-boot</a></p>
 <p>覆盖了：</p>
 <p>web开发</p>
@@ -877,7 +877,7 @@ web开发
 <p><strong>使用</strong> <code>**@EnableWebMvc+@Configuration+DelegatingWebMvcConfiguration 全面接管SpringMVC**</code></p>
 <h3 id="2-2-简单功能分析"><a href="#2-2-简单功能分析" class="headerlink" title="2.2 简单功能分析"></a>2.2 简单功能分析</h3><h4 id="2-2-1-静态资源访问"><a href="#2-2-1-静态资源访问" class="headerlink" title="2.2.1 静态资源访问"></a>2.2.1 静态资源访问</h4><h5 id="1-静态资源目录"><a href="#1-静态资源目录" class="headerlink" title="1 静态资源目录"></a>1 静态资源目录</h5><p>只要静态资源放在类路径下： called <code>/static</code> (or <code>/public</code> or <code>/resources</code> or <code>/META-INF/resources</code></p>
 <p>访问 ： 当前项目根路径/ + 静态资源名 </p>
-<p><img src="C:\Users\95671\AppData\Roaming\Typora\typora-user-images\image-20220115114411922.png" alt="image-20220115114411922"></p>
+<p><img src="/2022/01/13/20220113_springboot2/Users\95671\AppData\Roaming\Typora\typora-user-images\image-20220115114411922.png" alt="image-20220115114411922"></p>
 <p>原理： 静态映射/**。也就是所有请求都会经过静态资源处理器</p>
 <p>请求进来，先去找Controller看能不能处理。不能处理的所有请求又都交给静态资源处理器。静态资源处理器去上述指定目录下寻找，静态资源也找不到则响应404页面</p>
 <p>改变默认的静态资源路径</p>
@@ -895,7 +895,7 @@ web开发
 <p>以jquery为例子，引入之后就有相应的jar包了</p>
 <figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.webjars<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jquery<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p><img src="C:\Users\95671\AppData\Roaming\Typora\typora-user-images\image-20220115120735208.png" alt="image-20220115120735208"></p>
+<p><img src="/2022/01/13/20220113_springboot2/Users\95671\AppData\Roaming\Typora\typora-user-images\image-20220115120735208.png" alt="image-20220115120735208"></p>
 <p>要访问其静态资源，只需访问下面的地址即可，因为springboot会自动映射 /<a target="_blank" rel="noopener" href="http://localhost:8080/webjars/jquery/3.5.1/jquery.js">webjars</a>/**</p>
 <p>访问地址：<a target="_blank" rel="noopener" href="http://localhost:8080/webjars/jquery/3.5.1/jquery.js">http://localhost:8080/webjars/<strong>jquery/3.5.1/jquery.js</strong></a>   后面地址要按照依赖里面的包路径</p>
 <h4 id="2-2-2-欢迎页支持"><a href="#2-2-2-欢迎页支持" class="headerlink" title="2.2.2 欢迎页支持"></a>2.2.2 欢迎页支持</h4><ul>

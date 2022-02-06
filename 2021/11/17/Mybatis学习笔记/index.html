@@ -397,17 +397,17 @@
 <h1 id="二、MyBatis的CRUD操作"><a href="#二、MyBatis的CRUD操作" class="headerlink" title="二、MyBatis的CRUD操作"></a>二、MyBatis的CRUD操作</h1><h2 id="2-1-在Mapper-xml中进行配置"><a href="#2-1-在Mapper-xml中进行配置" class="headerlink" title="2.1 在Mapper.xml中进行配置"></a>2.1 在Mapper.xml中进行配置</h2><p>示例：</p>
 <figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.ch.dao.UserMapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getUserList"</span> <span class="attr">resultType</span>=<span class="string">"User"</span>&gt;</span></span><br><span class="line">        select * from mybatis.t_user</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>对于不同的语句，可用不同的标签进行配置，有<select>   等
-其中id属性用于指定对应的方法，parameterType属性用于指定参数的类型，resultType属性用于指定返回值的类型，若语句中需要传入参数，用#{}传入，且参数名需要与方法中指定的参数名字相同，如下：
-123public interface UserMapper {    User getUserById(int tt);}
+<p>对于不同的语句，可用不同的标签进行配置，有<select>   等</select></p>
+<p>其中id属性用于指定对应的方法，parameterType属性用于指定参数的类型，resultType属性用于指定返回值的类型，若语句中需要传入参数，用#{}传入，且参数名需要与方法中指定的参数名字相同，如下：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>{</span><br><span class="line">    <span class="function">User <span class="title">getUserById</span><span class="params">(<span class="keyword">int</span> tt)</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-123&lt;select id="getUserById" parameterType="int" resultType="User"&gt;        select * from mybatis.t_user where id=#{tt}&lt;/select&gt;
+<figure class="highlight xml"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"getUserById"</span> <span class="attr">parameterType</span>=<span class="string">"int"</span> <span class="attr">resultType</span>=<span class="string">"User"</span>&gt;</span></span><br><span class="line">        select * from mybatis.t_user where id=#{tt}</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 
-为了解决这一问题，有以下两种方法：
-2.1.1 @Param通过@param注解为方法中的参数起别名，如下：
-123public interface UserMapper {    User getUserById(@Param("tt") int id);}
+<p>为了解决这一问题，有以下两种方法：</p>
+<h3 id="2-1-1-Param"><a href="#2-1-1-Param" class="headerlink" title="2.1.1 @Param"></a>2.1.1 @Param</h3><p>通过@param注解为方法中的参数起别名，如下：</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>{</span><br><span class="line">    <span class="function">User <span class="title">getUserById</span><span class="params">(<span class="meta">@Param("tt")</span> <span class="keyword">int</span> id)</span></span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-此时</select>标签中即可传入tt作为参数</p>
+<p>此时<select>标签中即可传入tt作为参数</select></p>
 <p><strong>注意：</strong>@Param注解有以下使用原则：</p>
 <ul>
 <li>在方法只接收一个参数的情况下，可以不使用@Param。</li>
@@ -584,7 +584,7 @@
 <li>查出的数据都会被默认先放在一级缓存中</li>
 <li>只有会话提交或者关闭以后，一级缓存中的数据才会转到二级缓存中</li>
 </ul>
-<p><img src="C:\Users\95671\AppData\Roaming\Typora\typora-user-images\image-20211117201935725.png" alt="image-20211117201935725"></p>
+<p><img src="/2021/11/17/Mybatis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Users\95671\AppData\Roaming\Typora\typora-user-images\image-20211117201935725.png" alt="image-20211117201935725"></p>
 
                 
             </div>
