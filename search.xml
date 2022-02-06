@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title></title>
+      <title>图片上传测试</title>
       <link href="/2022/02/05/test/"/>
       <url>/2022/02/05/test/</url>
       
-        <content type="html"><![CDATA[<p><img src="/../images/1.jpg" alt="1"></p>]]></content>
+        <content type="html"><![CDATA[<p><img src="/../images/1.jpg" alt="1"></p><p><img src="/../images/%E4%BA%94%E6%9D%A1%E6%82%9F.jpg" alt="1"></p>]]></content>
       
       
       
